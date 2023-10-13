@@ -2,7 +2,7 @@ import argparse
 import sys
 
 from CalcRating import CalcRating
-# from TextDataReader import TextDataReader
+from TextDataReader import TextDataReader
 from HonorsStudents import HonorsStudents
 from YamlTextDataReader import YamlTextDataReader
 
@@ -20,8 +20,8 @@ def main():
     reader = YamlTextDataReader()
     students = reader.read(path)
     print("Students: ", students)
-    # rating = CalcRating(students).calc()
-    # print("Rating: ", rating)
+    rating = CalcRating(students).calc()
+    print("Rating: ", rating)
     honor = HonorsStudents(students).rel()
     print("Количество студентов отличников =", honor)
 

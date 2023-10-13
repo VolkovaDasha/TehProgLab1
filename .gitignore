@@ -1,2 +1,16 @@
 src/__pycache__/
-
+test/__pycache__/test_YamlDataReader.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_TextDataReader.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_main.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_HonorsStudents.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_CalcRating.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/__init__.cpython-310.pyc
+.gitignore
+test/__pycache__/test_TextDataReader.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_main.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_CalcRating.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_CalcRating.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_TextDataReader.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_main.cpython-310-pytest-7.4.2.pyc
+test/__pycache__/test_CalcRating.cpython-310-pytest-7.4.2.pyc
+src/__pycache__/CalcRating.cpython-310.pyc

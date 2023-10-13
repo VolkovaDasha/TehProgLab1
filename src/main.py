@@ -2,7 +2,7 @@ import argparse
 import sys
 
 from CalcRating import CalcRating
-# from TextDataReader import TextDataReader
+from TextDataReader import TextDataReader
 from HonorsStudents import HonorsStudents
 from YamlTextDataReader import YamlTextDataReader
 
@@ -17,13 +17,20 @@ def get_path_from_arguments(args) -> str:
 
 def main():
     path = get_path_from_arguments(sys.argv[1:])
-    reader = YamlTextDataReader()
-    students = reader.read(path)
-    print("Students: ", students)
-    # rating = CalcRating(students).calc()
-    # print("Rating: ", rating)
-    honor = HonorsStudents(students).rel()
-    print("Количество студентов отличников =", honor)
+    vpath = path.split(".")
+    if vpath[-1] == "txt":
+        reader = TextDataReader()
+        students = reader.read(path)
+        print("Students: ", students)
+        rating = CalcRating(students).calc()
+        print("Rating: ", rating)
+    else:
+        reader = YamlTextDataReader()
+        students = reader.read(path)
+        print("Students: ", students)
+        honor = HonorsStudents(students).rel()
+        print("Количество студентов отличников =", honor)
+
 
 
 if __name__ == "__main__":

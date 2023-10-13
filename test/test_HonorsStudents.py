@@ -31,8 +31,7 @@ class TestHonorsStudents:
     def test_init_honors_students(self,
                                   input_data: tuple[DataType, int]) -> None:
         honors_students = HonorsStudents(input_data[0])
-        # обращение к self.data из класса HonorsStudents
-        # (через объект honors_students)
+        # обращение к self.data из класса HonorsStudents (через объект honors_students)
         assert input_data[0] == honors_students.data
 
     def test_relevant(self, input_data: tuple[DataType, int]) -> None:

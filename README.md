@@ -12,13 +12,13 @@
 
 Проверим работоспособность первоначальной программы. Создадим виртуальное окружение и запустим необходимые пакеты после чего проверим программу на работоспособность:
 
-![image](https://github.com/VolkovaDasha/PTLab1/assets/118906106/8c4cc75f-702c-4fc2-b215-b26cb170b8b2)
-![image](https://github.com/VolkovaDasha/PTLab1/assets/118906106/54ee89a9-b406-4110-b88a-9e5fadfa9895)
-![image](https://github.com/VolkovaDasha/PTLab1/assets/118906106/aed47434-6921-4b37-adcd-e3a1d0d5f961)
-
+![image](https://github.com/VolkovaDasha/TehProgLab1/assets/118906106/570ceb5d-9f85-466c-ab0e-60ac515f2b7d)
+![image](https://github.com/VolkovaDasha/TehProgLab1/assets/118906106/9ced85a8-ab66-432c-b80c-c7825d2233db)
+![image](https://github.com/VolkovaDasha/TehProgLab1/assets/118906106/f7077247-ac5b-4c8e-be06-f2db419d20d9)
 
 ## Индивидуальное задание: 
-![image](https://github.com/VolkovaDasha/PTLab1/assets/118906106/4f0b4263-5adc-4146-88b5-15063c95f22d)
+![image](https://github.com/VolkovaDasha/TehProgLab1/assets/118906106/d39fb935-82bc-40a4-b6cb-854e0f6c7c59)
+
 
 #### Создадим наследника класса DataReader, который обрабатывает входной файл data.yaml. 
 
@@ -47,6 +47,9 @@ class YamlTextDataReader(DataReader):
                     self.students[name].append((subject, int(rating)))  
         return self.students
 ```
+Проверим работу программы, после внесения изменений в main.py:
+![image](https://github.com/VolkovaDasha/TehProgLab1/assets/118906106/6659712a-01be-49c5-86db-ea631f350ce6)
+
 #### Создадим модульный тест:
 
 ```python
@@ -86,7 +89,8 @@ class TestYamlDataReader:
 ```
 
 #### Проверим работу теста:
-![image](https://github.com/VolkovaDasha/PTLab1/assets/118906106/ad815a2d-6675-4aac-9538-a62e002ffb98)
+
+![image](https://github.com/VolkovaDasha/TehProgLab1/assets/118906106/b8f52839-ba29-4f36-8f11-c75834eb06d2)
 
 
 #### Создадим класс, реализующий расчет количества студентов-отличников.
@@ -122,7 +126,7 @@ import argparse
 import sys
 
 from CalcRating import CalcRating
-from TextDataReader import TextDataReader
+# from TextDataReader import TextDataReader
 from HonorsStudents import HonorsStudents
 from YamlTextDataReader import YamlTextDataReader
  
@@ -137,8 +141,8 @@ def main():
     reader = YamlTextDataReader()
     students = reader.read(path)
     print("Students: ", students)
-    rating = CalcRating(students).calc()
-    print("Rating: ", rating)
+    # rating = CalcRating(students).calc()
+    # print("Rating: ", rating)
     honor = HonorsStudents(students).rel()
     print ("Количество студентов отличников =", honor)
 
@@ -147,7 +151,7 @@ if __name__ == "__main__":
 
 ```
 #### Проверим работоспособность программы:
-![image](https://github.com/VolkovaDasha/PTLab1/assets/118906106/0e761631-5d43-400c-8dc6-3656693e7943)
+![image](https://github.com/VolkovaDasha/TehProgLab1/assets/118906106/d9ae0df4-67a3-457e-9daa-57e8e7a3ef11)
 
 #### Создадим модульный тест:
 ```python
@@ -188,5 +192,6 @@ class TestHonorsStudents:
 ```
 #### Проверим работу теста: 
 
-![image](https://github.com/VolkovaDasha/PTLab1/assets/118906106/fbc1e964-c9e1-4131-bdb1-ea4b2c7653f2)
+![image](https://github.com/VolkovaDasha/TehProgLab1/assets/118906106/810bfa60-6753-4f73-9fd6-21c8e3ee5fc5)
+
 
